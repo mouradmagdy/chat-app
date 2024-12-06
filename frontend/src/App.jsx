@@ -1,18 +1,19 @@
+import { Route, Routes } from "react-router";
 import "./App.css";
-import MessageContainer from "./components/messages/MessageContainer";
-import Sidebar from "./components/Sidebar.jsx/Sidebar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <div className="p-4 h-screen flex items-center justify-center">
-      {/* // <div className="flex sm:h-[450px] md:h-[550px] rounded-lg overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0"> */}
-      {/* <Signup /> */}
-      {/* <Sidebar />
-      <MessageContainer /> */}
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+      <Toaster />
     </div>
   );
 }
