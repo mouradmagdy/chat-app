@@ -12,7 +12,7 @@ const Message = () => {
       <div className={`chat-bubble text-white bg-blue-500`}>
         Hi! What is upp?
       </div>
-      <div className="chat-footer opacity-50 text-xs flex ga-1 items-center">
+      <div className="chat-footer opacity-50 text-xs flex gap-1 items-center">
         12:42
       </div>
     </div>

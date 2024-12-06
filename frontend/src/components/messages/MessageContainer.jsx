@@ -1,8 +1,10 @@
 import MessageInput from "./MessageInput";
 import Messages from "./Messages";
+import NoChatSelected from "./NoChatSelected";
 
 const MessageContainer = () => {
-  return (
+  const chatSelected = false;
+  return chatSelected ? (
     <div className="md:min-w-[450px] flex flex-col">
       <>
         {/* Header */}
@@ -14,6 +16,8 @@ const MessageContainer = () => {
         <MessageInput />
       </>
     </div>
+  ) : (
+    <NoChatSelected />
   );
 };
 
