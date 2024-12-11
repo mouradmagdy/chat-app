@@ -31,11 +31,11 @@ export const SocketContextProvider = ({ children }) => {
         setSocket(null);
       }
     }
-  }, [authUser, socket]);
+  }, [authUser]);
   return (
-    <SocketContextProvider value={{ socket, onlineUsers }}>
+    <socketContext.Provider value={{ socket, onlineUsers }}>
       {children}
-    </SocketContextProvider>
+    </socketContext.Provider>
   );
 };
 
