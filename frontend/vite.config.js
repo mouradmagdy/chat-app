@@ -8,7 +8,9 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        target: "https://chat-app-mm.vercel.app/",
+        target: "https://chat-app-mm.vercel.app/api",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""), // Optional, depending on your backend's base path
       },
     },
   },
