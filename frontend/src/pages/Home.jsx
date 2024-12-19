@@ -1,12 +1,26 @@
 import MessageContainer from "../components/messages/MessageContainer";
 import Sidebar from "../components/Sidebar.jsx/Sidebar";
+import useConversation from "../store/useConversation";
 
 const Home = () => {
-  return (
-    <div className="flex h-full  sm:h[450px] md:h-[550px] rounded-lg overflow-hidden bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
-      <Sidebar />
+  const { selectedConversation, setSelectedConversation } = useConversation();
 
-      <MessageContainer />
+  return (
+    <div className="flex h-full w-full  md:h-[550px] rounded-lg overflow-hidden ">
+      <div
+        className={`h-full w-full  md:h-[550px] bg-white flex ${
+          selectedConversation ? "hidden md:flex" : ""
+        }`}
+      >
+        <Sidebar />
+      </div>
+      <div
+        className={`h-full w-full md:h-[550px] bg-white flex ${
+          !selectedConversation ? "hidden md:flex" : ""
+        }`}
+      >
+        <MessageContainer />
+      </div>
     </div>
   );
 };
