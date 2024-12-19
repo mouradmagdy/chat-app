@@ -14,10 +14,10 @@ const Login = () => {
   }
   return (
     <div className="flex flex-col items-center justify-center min-w-96 mx-auto ">
-      <div className="w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
-        <h1 className="text-3xl font-semibold text-center text-gray-300">
+      <div className="w-full p-6 rounded-lg shadow-md bg-white ">
+        <h1 className="text-3xl font-semibold text-center text-gray-400">
           Login
-          <span className="text-blue-500">Chatapp</span>
+          <span className="text-black">Chatapp</span>
         </h1>
         <form onSubmit={handleSubmit}>
           <div>
@@ -46,13 +46,16 @@ const Login = () => {
           </div>
           <Link
             to="/signup"
-            className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block"
+            className="text-sm hover:underline hover:text-gray-500 mt-2 inline-block"
           >
-            Dont&apos;t have an account?
+            Don&apos;t have an account?
           </Link>
           <div>
             {" "}
-            <button className="btn btn-block btn-sm mt-2" disabled={loading}>
+            <button
+              className="btn btn-block btn-sm mt-2 bg-black text-white font-normal hover:bg-white hover:text-black hover:border-black"
+              disabled={loading}
+            >
               {loading ? (
                 <span className="loading loading-spinner"></span>
               ) : (
