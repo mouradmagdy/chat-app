@@ -1,15 +1,17 @@
 services:
   frontend:
-    build:
-      context: ./frontend
+    # build:
+    # context: ./frontend
+    image: mourad88/chat-app-frontend:latest
     ports:
       - "3000:80"
     depends_on:
       - backend
 
   backend:
-    build:
-      context: ./
+    # build:
+    #   context: ./
+    image: mourad88/chat-app-backend:latest
     ports:
       - "5000:5000"
     env_file:
