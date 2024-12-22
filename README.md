@@ -6,13 +6,19 @@
   <img src="https://github.com/mouradmagdy/chat-app/blob/main/assets/pic2.png?raw=true" alt="Screenshot 2" width="45%" />
 </p>
 
-A real-time chatting application built with React, Node.js, MongoDB, and WebSockets, deployed with Docker.
-
+A real-time chatting application where users can signup or login to chat with different people.
 ## Features
 * Real-time messaging using WebSockets
 * User authentication
 * Responsive and interactive user interface
 * Deployment with Docker and Nginx
+## Technologies
+* React
+* Nodejs
+* Mongodb
+* Zustand, tailwindCSS and DaisyUI
+* Docker
+* Nginx
 
 ## Prerequisites
 Ensure you have the following installed:
