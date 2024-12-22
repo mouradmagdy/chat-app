@@ -15,6 +15,7 @@ export const protectRoute = async (req, res, next) => {
 
     // token expired
     if (!decoded) {
+      console.log(token);
       return res
         .status(401)
         .json({ error: "Unauthorized, you have to login again" });

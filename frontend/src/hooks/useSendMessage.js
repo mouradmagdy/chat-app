@@ -11,12 +11,13 @@ const useSendMessage = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `/api/messages/send/${selectedConversation._id}`,
+        `http://localhost:5000/api/messages/send/${selectedConversation._id}`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
+          credentials: "include",
           body: JSON.stringify({ message }),
         }
       );

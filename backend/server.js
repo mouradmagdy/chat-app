@@ -15,7 +15,7 @@ const __dirname = path.resolve();
 
 dotenv.config();
 
-const allowdOrigins = ["https://chat-app-eoq7.vercel.app/"];
+const allowdOrigins = ["http://localhost:3000"];
 
 app.use(
   cors({
